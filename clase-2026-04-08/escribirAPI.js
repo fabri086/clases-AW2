@@ -7,14 +7,12 @@ try{
  //hacemos una peticion con FETCH -> con promesa
  const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos/1')
  //Extraemos del cuerpo de la peticion de los datos
- 
  //que hace json(): una promesa 
  const Productos = await respuesta.json()
 
  //creamos la ruta
   //const ruta = path.join('./api.txt') envia una copia de los datos del archivo(file) a api.txt
- 
-  const ruta = path.join('./api.json') //para que cargue tenes que agregar esto contenido
+ const ruta = path.join('./api.json') //para que cargue tenes que agregar esto contenido
  //del const contenido = JSON.stringify(Productos) hay agregas(Productos,null,4)
 
  //guardamos los datos de archivos
