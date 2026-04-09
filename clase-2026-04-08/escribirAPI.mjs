@@ -11,7 +11,10 @@ try{
  const Productos = await respuesta.json()
 
  //creamos la ruta
+ // 1º lo q hicimos 
   //const ruta = path.join('./api.txt') envia una copia de los datos del archivo(file) a api.txt
+
+  //2º despues de hacer el 1º
  const ruta = path.join('./api.json') //para que cargue tenes que agregar esto contenido
  //del const contenido = JSON.stringify(Productos) hay agregas(Productos,null,4)
 

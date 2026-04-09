@@ -2,11 +2,11 @@
   "name": "clase-2026-04-08",
   "version": "1.0.0",
   "description": "Las clases estan aquí\r dfdgdgfd",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "dev": "node index.js",
-     "leerAPI": "node leerAPI.js",
-     "escribirAPI": "node escribirAPI.js"
+    "dev": "node index.mjs",
+     "leerAPI": "node leerAPI.mjs",
+     "escribirAPI": "node escribirAPI.mjs"
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,4 @@
-
+//leemos API
 try{
  //hacemos una peticion con FETCH 
  const respuesta = await fetch('https://jsonplaceholder.typicode.com/todos/1')
