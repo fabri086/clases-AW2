@@ -1,0 +1,26 @@
+### --
+
+# GET - IES
+GET https://ies21.edu.ar/carreras
+
+
+### ---
+
+# GET - REST API
+GET https://api.escuelajs.co/api/v1/userss
+
+
+### ---
+#GET localhost3000
+
+GET http://localhost:3000
+
+### ---
+#GET localhost3000
+
+POST http://localhost:3000/proceso-formulario
+
+### ---
+#GET localhost3000
+
+POST http://localhost:3000//guardar-datos
