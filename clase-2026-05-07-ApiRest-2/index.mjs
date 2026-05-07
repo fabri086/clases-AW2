@@ -11,7 +11,13 @@ import express from 'express'
  
  * DELETE /api/v1/productos/:id
   */
-import { obtenerProductos, obtenerProductoPorId, eliminarProducto, altoProducto } from './funciones.mjs'
+import {
+  obtenerProductos,
+  obtenerProductoPorId,
+  eliminarProducto,
+  altoProducto,
+  modificarProducto
+} from './funciones.mjs'
 
 
 const PUERTO = 3000
@@ -30,7 +36,9 @@ app.get('/api/v1/productos/:id', obtenerProductoPorId)
 
 // POST /api/v1/productos ----> damos alta un registro
 app.post('/api/v1/productos', altoProducto)
+
 // PUT /api/v1/productos/:id ----> modificar un registro
+app.put('/api/v1/productos/:id', modificarProducto)
 
 // DELETE /api/v1/productos/:id ----> eliminar un registro
 app.delete('/api/v1/productos/:id', eliminarProducto)

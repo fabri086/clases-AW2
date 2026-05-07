@@ -32,5 +32,5 @@ const productos = [
     "id": "5"
   }
 ]
-
+//exportamos productos para que reciba las funciones.mjs
 export default productos
