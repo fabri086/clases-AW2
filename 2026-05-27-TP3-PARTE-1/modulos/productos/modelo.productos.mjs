@@ -11,7 +11,14 @@ export async function crearUno(datos){
 
     const {nombre,precio} = datos
 
-    const resultado = await pool.query('INSERT INTO menu(nombre, precio) VALUES ($1, $2) ',
+    const resultado = await pool.query(`
+        INSERT INTO menu
+        (nombre, precio)
+         VALUES 
+         ($1, $2)
+         RETURNING
+         id,producto,precio
+         `,
         [
             nombre,
             precio
