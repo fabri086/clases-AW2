@@ -1,4 +1,4 @@
-import expres from 'express'
+import express from 'express'
 import './inicial.env.mjs'
 import rutasProductos from './modulos/productos/ruta.productos.mjs' //esto es un middlware
 
@@ -7,7 +7,7 @@ import rutasProductos from './modulos/productos/ruta.productos.mjs' //esto es un
 
 const PUERTO = process.env.PUERTO || 3000
 
-const app = expres()
+const app = express()
 app.use(express.json())
 
 app.use(rutasProductos)
