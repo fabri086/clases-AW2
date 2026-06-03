@@ -1,0 +1,39 @@
+import express from 'express'
+import multer from 'multer'
+//path
+const PUERTO = 3000
+
+const app = express()
+
+
+//ejecutamos multer()
+//documentacion -> https://github.com/expressjs/multer
+const subirArchivo = multer({
+    dest: './archivos'
+})
+//aca va solo el nombre del campo, si coincide con el nombre no lo va encontrar
+//lo que va el "single" solo el atributo del index.html
+
+const gestionArchivos = subirArchivo.single('imagen') //<-- devuelve una funcion
+
+//use por defecto utiliza la ruta raiz /, pero la utiliza como prefijo
+app.use('/admin', express.static('./front-admin'))
+
+//la ruta y metodo 
+// fijate bien que los nombre son igual al front-admin
+
+app.post('/subir-archivo', (req, res) => {
+
+    gestionArchivos(req, res, (error) => {
+        //si hay error respondemos
+        if (error) return res.status(500).json({ mensaje: 'Error en el servidor' })
+        // si no hay error
+        //req.body <--- app.use(express.json())
+        console.log(req.file)
+        //---
+        res.json({ mensaje: 'ruta subida de archivo al formulario' })
+    })
+
+})
+
+app.listen(PUERTO)

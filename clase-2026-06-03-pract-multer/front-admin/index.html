@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTER</title>
+</head>
+
+<body>
+    <!-- 
+     esto agregamos
+     <form action="/subir-archivo" method="post" enctype="multipart/form-data">
+    </form>
+    -->
+    <!--con JS ultiliza -> fectFormData-->
+    <!--si no pongo nada en "form action="/subir-archivo" 
+    lo tomara como un servidor localhost:3000-->
+    <form action="/subir-archivo" method="post" enctype="multipart/form-data">
+        <input type="text" name="producto">
+        <br>
+        <input type="file" name="imagen">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
