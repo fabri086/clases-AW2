@@ -1,0 +1,4 @@
+### --
+
+#GET - API
+GET http://localhost:3000/usuarios

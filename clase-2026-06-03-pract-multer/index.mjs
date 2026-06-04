@@ -1,7 +1,7 @@
 import express from 'express'
 import multer from 'multer'
 import {nanoid} from 'nanoid'
-import mime from 'mime-type'
+import mime from 'mime-types'
 //path
 const PUERTO = 3000
 
@@ -25,7 +25,7 @@ const alamacenamiento = multer.diskStorage({
     // Obtengo la extension desde el mime type
     // const extension = mime.extension(file.mimetype)
     //creo el nombre del archivo con un identificador unico con nanoid
-    const nombreImagen = nanoid() // genera un UID
+    const nombreImagen = nanoid() + '.' + mime.extension(file.mimetype) // genera un UID
     cb(null, nombreImagen)
   }
 })
