@@ -28,7 +28,7 @@ app.use('/login', express.static('./front-end/front-login'))
 
 
 // Ruta que va a gestionar el autenticacion y acceso
-app.post('/autenticacion', (req, res) => {
+app.post('/autenticacion', (req, res) => { // <--este tengo que meterlo en la carpeta de hashing
     const { usuario, clave } = req.body
     //Consultar a la BD si el usuario existe que seria "admin" y clave "123456"
     if (usuario != 'admin' || clave != '123456') {

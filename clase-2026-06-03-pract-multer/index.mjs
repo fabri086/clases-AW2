@@ -12,7 +12,7 @@ const app = express()
 
 const alamacenamiento = multer.diskStorage({
     //-----------------------------------------
-    //Destino de almacenamiento
+    //Destino de almacenamiento donde lo va a guardar
   destination: function (req, file, cb) {
     // Chequeos
 
